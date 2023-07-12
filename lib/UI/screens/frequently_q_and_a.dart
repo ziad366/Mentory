@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FaqScreen extends StatelessWidget {
+  const FaqScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,7 +10,7 @@ class FaqScreen extends StatelessWidget {
         title: const Text('Frequently Asked Questions'),
       ),
       body: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           FaqItem(
             question: 'Q: What is a mentoring app?',
             answer:
@@ -44,10 +46,10 @@ class FaqItem extends StatefulWidget {
   final String question;
   final String answer;
 
-  FaqItem({required this.question, required this.answer});
+  const FaqItem({super.key, required this.question, required this.answer});
 
   @override
-  _FaqItemState createState() => _FaqItemState();
+  State<FaqItem> createState() => _FaqItemState();
 }
 
 class _FaqItemState extends State<FaqItem> {

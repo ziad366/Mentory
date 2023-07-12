@@ -15,6 +15,8 @@ class Session {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final sessions = [
@@ -77,9 +79,9 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "mentor",
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.normal),
                       ),
                       MaterialButton(
@@ -87,8 +89,8 @@ class HomeScreen extends StatelessWidget {
                           Navigator.pushNamed(context, '/mentorProf');
                         },
                         child: Text(
-                          '${sessions[index].mentorName}',
-                          style: TextStyle(
+                          sessions[index].mentorName,
+                          style: const TextStyle(
                             color: Colors.lightBlue,
                           ),
                         ),

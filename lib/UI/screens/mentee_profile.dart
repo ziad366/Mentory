@@ -27,7 +27,9 @@ class MenteeProfileScreen extends StatelessWidget {
             SizedBox(height: 25.0),
             Center(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/chat');
+                },
                 child: Text('Start Chatting'),
               ),
             ),

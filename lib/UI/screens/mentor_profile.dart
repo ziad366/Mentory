@@ -30,14 +30,18 @@ class MentorProfileScreen extends StatelessWidget {
               children: [
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/chat');
+                    },
                     child: Text('Start Chatting'),
                   ),
                 ),
                 SizedBox(width: 25.0),
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/scheduleScreen');
+                    },
                     child: Text('achadule session'),
                   ),
                 ),

@@ -31,6 +31,13 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.payment),
+            title: const Text('Payments'),
+            onTap: () {
+              Navigator.pushNamed(context, '/payment');
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.add),
             title: const Text('Requests'),
             onTap: () {
